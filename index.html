@@ -6,7 +6,74 @@
     <title>Meteo APP</title>
   </head>
   <body>
-    <h1>Weather App</h1>
+    <header>
+      <!--Search bar -->
+      <form action="">
+        <input type="search" placeholder="Enter a city..." required />
+        <input type="submit" value="search" />
+      </form>
+      <!--Toogle
+      <div class="toggle-theme">toggle button</div> -->
+    </header>
+
+    <main>
+      <!--Current Weather -->
+
+      <div>
+        <!-- Basic data -->
+        <section>
+          <p>Thursday, 12:04</p>
+          <h2>Sintra</h2>
+          <p>Rain</p>
+          <h1>15ºC</h1>
+        </section>
+
+        <!--Icon -->
+        <section>
+          <img
+            src="https://basmilius.github.io/weather-icons/production/line/all/drizzle.svg"
+            alt="Clear Night"
+            height="100"
+          />
+        </section>
+      </div>
+
+      <!--Specs-->
+      <div>
+        <!--Feels like-->
+        <section>
+          <img
+            src="https://basmilius.github.io/weather-icons/production/line/all/thermometer.svg"
+            alt="Thermometer icon"
+            height="20"
+          />
+          <p>feel like</p>
+          <p>8ºC</p>
+        </section>
+
+        <!--Humidity -->
+        <section>
+          <img
+            src="https://basmilius.github.io/weather-icons/production/line/all/humidity.svg"
+            alt="Humidity icon"
+            height="20"
+          />
+          <p>humidity</p>
+          <p>8ºC</p>
+        </section>
+
+        <!--Wind-->
+        <section>
+          <img
+            src="https://basmilius.github.io/weather-icons/production/line/all/wind.svg"
+            alt="Wind icon"
+            height="20"
+          />
+          <p>wind</p>
+          <p>8ºC</p>
+        </section>
+      </div>
+    </main>
     <footer>
       This project was coded by
       <a href="https://github.com/saranascimento9/app-meteo">GitHub</a> and
