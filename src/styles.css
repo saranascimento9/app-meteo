@@ -1,0 +1,52 @@
+body {
+  background-color: #f1f1f1;
+  font-family: "Funnel Display", sans-serif;
+  color: #96a6c0;
+}
+
+.weather-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 32px;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.input {
+  background-color: #f3f4f8;
+  border: none;
+  width: 80%;
+  height: 45px;
+  margin-right: 10px;
+  padding: 16px;
+  border-radius: 30px;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.form-btn {
+  background-color: #2885c7;
+  border: none;
+  padding: 16px;
+  color: #fff;
+  border-radius: 30px;
+}
+
+h1 {
+  font-family: "Funnel Display", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 35px;
+}
+
+footer {
+  color: #d9d9d9;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a {
+  color: #7e7e7e;
+  text-decoration: none;
+}
