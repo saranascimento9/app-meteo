@@ -1,8 +1,13 @@
 body {
   background-color: #f1f1f1;
-  font-family: "Funnel Display", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
   color: #96a6c0;
 }
+
+/* APP container */
 
 .weather-container {
   background-color: #fff;
@@ -12,10 +17,17 @@ body {
   margin: 0 auto;
 }
 
+/*  font-family: "Funnel Display", sans-serif;*/
+
+header {
+  margin-bottom: 30px;
+}
+/* Form */
+
 .input {
   background-color: #f3f4f8;
   border: none;
-  width: 80%;
+  width: 70%;
   height: 45px;
   margin-right: 10px;
   padding: 16px;
@@ -32,18 +44,102 @@ body {
   padding: 16px;
   color: #fff;
   border-radius: 30px;
+  width: 25%;
 }
 
-h1 {
-  font-family: "Funnel Display", sans-serif;
-  font-optical-sizing: auto;
-  font-size: 35px;
+.form-btn:hover {
+  cursor: pointer;
+  background-color: #b7e1ff;
+  color: #2885c7;
+  transition: 0.3s;
+}
+/* Current Weather */
+
+.current-weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.date {
+  color: #96a6c0;
+  font-size: 14px;
+  margin: 0;
+}
+.current-city {
+  font-size: 28px;
+  font-weight: 300;
+  color: #222041;
+  margin: 6px 0;
+}
+
+.description {
+  color: #96a6c0;
+  font-size: 14px;
+  margin: 0;
+}
+
+.current-temperature {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 300;
+  color: #222041;
+  margin: 0;
+}
+.current-temperature span {
+  font-size: 20px;
+  font-weight: 300;
+  position: relative;
+  top: -25px;
+}
+
+/* Janela humidade vento e sensação */
+
+.weather-specs {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-radius: 50px;
+  color: #fff;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(122, 200, 255) 0%,
+    rgb(40, 133, 199) 90%
+  );
+}
+
+.specification {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+}
+
+.weather-specs img {
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+}
+
+.spec-name {
+  font-size: 12px;
+  margin: 0;
+}
+.spec-value {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Footer */
 footer {
   color: #d9d9d9;
   text-align: center;
-  font-size: 12px;
+  font-size: 10px;
+  margin: 50px 0 0 0;
 }
 
 footer a {

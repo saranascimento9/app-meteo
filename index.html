@@ -9,6 +9,12 @@
       href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="weather-container">
@@ -30,58 +36,56 @@
       <main>
         <!--Current Weather -->
 
-        <div>
+        <div class="current-weather">
           <!-- Basic data -->
-          <section>
-            <p>Thursday, 12:04</p>
-            <h2>Sintra</h2>
-            <p>Rain</p>
-            <h1>15ºC</h1>
+          <section class="city-weather">
+            <p class="date">Thursday, 12:04</p>
+            <h2 class="current-city">Sintra</h2>
+            <p class="description">Rain</p>
+            <h1 class="current-temperature">15<span>ºC</span></h1>
           </section>
 
           <!--Icon -->
           <section>
             <img
-              src="https://basmilius.github.io/weather-icons/production/line/all/drizzle.svg"
-              alt="Drizzel rain"
-              height="100"
+              src="https://basmilius.github.io/weather-icons/production/line/all/rain.svg"
+              alt="Rain"
+              height="200"
             />
           </section>
         </div>
 
         <!--Specs-->
-        <div>
+        <div class="weather-specs">
           <!--Feels like-->
-          <section>
+          <section class="specification">
             <img
-              src="https://basmilius.github.io/weather-icons/production/line/all/thermometer.svg"
+              src="images/feels like.svg"
               alt="Thermometer icon"
-              height="20"
+              height="10"
             />
-            <p>feel like</p>
-            <p>8ºC</p>
+            <div>
+              <p class="spec-name">feel like</p>
+              <span class="spec-value">8ºC</span>
+            </div>
           </section>
 
           <!--Humidity -->
-          <section>
-            <img
-              src="https://basmilius.github.io/weather-icons/production/line/all/humidity.svg"
-              alt="Humidity icon"
-              height="20"
-            />
-            <p>humidity</p>
-            <p>8ºC</p>
+          <section class="specification">
+            <img src="images/humidity.svg" alt="Humidity icon" height="10" />
+            <div>
+              <p class="spec-name">humidity</p>
+              <span class="spec-value">92%</span>
+            </div>
           </section>
 
           <!--Wind-->
-          <section>
-            <img
-              src="https://basmilius.github.io/weather-icons/production/line/all/wind.svg"
-              alt="Wind icon"
-              height="20"
-            />
-            <p>wind</p>
-            <p>8ºC</p>
+          <section class="specification">
+            <img src="images/wind.svg" alt="Wind icon" height="10" />
+            <div>
+              <p class="spec-name">wind</p>
+              <span class="spec-value">30 km/h</span>
+            </div>
           </section>
         </div>
       </main>
