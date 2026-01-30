@@ -78,11 +78,12 @@ function updatedWeather(response) {
   }
 
   iconElement.innerHTML = `<img src="https://basmilius.github.io/weather-icons/production/line/all/${icon}.svg"
-              alt=""
+              alt="${icon}"
               height="180"
             />`;
 
   console.log(icon);
+  console.log(iconElement);
 
   timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
@@ -110,7 +111,7 @@ function formatDate(date) {
   let day = days[date.getDay()];
 
   if (minutes < 10) {
-    minutes = `${minutes}0`;
+    minutes = `0${minutes}`;
   }
   return `${day}, ${hours}:${minutes}`;
 }
