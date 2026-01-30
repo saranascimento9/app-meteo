@@ -12,7 +12,7 @@ body {
 
 .weather-container {
   background-color: #fff;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
   border-radius: 32px;
   width: 60vw;
   margin: 40px auto;
@@ -24,10 +24,17 @@ header {
 }
 /* Form */
 
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 10px;
+}
+
 .input {
   background-color: #f3f4f8;
+  width: 80%;
   border: none;
-  width: 70%;
   height: 45px;
   margin-right: 10px;
   padding: 16px;
@@ -41,13 +48,13 @@ header {
 .form-btn {
   background-color: #2885c7;
   border: none;
-  padding: 16px;
+  padding: 16px 30px;
   color: #fff;
   border-radius: 30px;
-  width: 100px;
 }
 
 .form-btn:hover {
+  border-radius: 3px;
   cursor: pointer;
   background-color: #b7e1ff;
   color: #2885c7;
@@ -58,8 +65,16 @@ header {
 .current-weather {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.city-weather {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
 }
 
 .date {
@@ -71,18 +86,11 @@ header {
   font-size: 28px;
   font-weight: 300;
   color: #222041;
-  margin: 6px 0;
-}
-
-.description {
-  color: #96a6c0;
-  font-size: 14px;
   margin: 0;
 }
 
 .current-temperature {
   font-size: 55px;
-  line-height: 55px;
   font-weight: 300;
   color: #222041;
   margin: 0;
@@ -94,30 +102,51 @@ header {
   top: -25px;
 }
 
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon img {
+  margin: 0;
+  position: relative;
+  top: -30px;
+}
+.description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  padding-left: 20px;
+}
+
 /* Janela humidade, vento e sensação */
 
 .weather-specs {
-  width: 60%;
-  margin: 0 auto;
+  width: 50%;
+  margin: 10px auto;
   padding: 20px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  border-radius: 50px;
+  justify-content: center;
+  border-radius: 80px;
   color: #fff;
   background: radial-gradient(
     circle at 10% 20%,
     rgb(122, 200, 255) 0%,
-    rgb(40, 133, 199) 90%
+    rgb(54, 154, 226) 90%
   );
+  position: relative;
+  top: -30px;
 }
 
 .specification {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px;
+  width: 140px;
+  padding: 5px 5px 5px 10px;
 }
 
 .weather-specs img {
@@ -128,7 +157,9 @@ header {
 
 .spec-name {
   font-size: 12px;
+  line-height: 20px;
   margin: 0;
+  color: #d7e6ff;
 }
 .spec-value {
   font-size: 16px;
@@ -141,7 +172,9 @@ footer {
   color: #d9d9d9;
   text-align: center;
   font-size: 10px;
-  margin: 50px 0 0 0;
+  margin: 30px 0 0 0;
+  padding: 10px 0 5px 0;
+  border-top: 0.5px solid #d9d9d9;
 }
 
 footer a {
