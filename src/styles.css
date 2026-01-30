@@ -93,11 +93,6 @@ form {
   color: #96a6c0;
 }
 
-.current-weather-icon img {
-  position: relative;
-  top: -30px;
-}
-
 /* Janela humidade, vento e sensação */
 
 .weather-specs {

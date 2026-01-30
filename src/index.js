@@ -9,12 +9,80 @@ function updatedWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
 
+  let iconElement = document.querySelector("#icon");
+
+  let icon = response.data.condition.icon;
+
   let date = new Date(response.data.time * 1000);
   let temperature = response.data.temperature.current;
   let description = response.data.condition.description;
   let feel = Math.round(response.data.temperature.feels_like);
   let humidity = response.data.temperature.humidity;
   let wind = response.data.wind.speed * 3.6;
+
+  switch (icon) {
+    case "clear-sky-day":
+      icon = "clear-day";
+      break;
+    case "clear-sky-night":
+      icon = "clear-night";
+      break;
+    case "few-clouds-day":
+      icon = "partly-cloudy-day";
+      break;
+    case "few-clouds-night":
+      icon = "partly-cloudy-night";
+      break;
+    case "scattered-clouds-day":
+      icon = "cloudy";
+      break;
+    case "scattered-clouds-night":
+      icon = "cloudy";
+      break;
+    case "broken-clouds-day":
+      icon = "overcast-day";
+      break;
+    case "broken-clouds-night":
+      icon = "overcast-night";
+      break;
+    case "shower-rain-day":
+      icon = "partly-cloudy-day-drizzle";
+      break;
+    case "shower-rain-night":
+      icon = "partly-cloudy-night-drizzle";
+      break;
+    case "rain-day":
+      icon = "rain";
+      break;
+    case "rain-night":
+      icon = "rain";
+      break;
+    case "thunderstorm-day":
+      icon = "thumderstorms-day";
+      break;
+    case "thunderstorm-night":
+      icon = "thumderstorms-night";
+      break;
+    case "snow-day":
+      icon = "snow";
+      break;
+    case "snow-night":
+      icon = "snow";
+      break;
+    case "mist-day":
+      icon = "fog-day";
+      break;
+    case "mist-night":
+      icon = "fog-nigth";
+      break;
+  }
+
+  iconElement.innerHTML = `<img src="https://basmilius.github.io/weather-icons/production/line/all/${icon}.svg"
+              alt=""
+              height="180"
+            />`;
+
+  console.log(icon);
 
   timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
