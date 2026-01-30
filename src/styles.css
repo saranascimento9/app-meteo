@@ -33,7 +33,7 @@ form {
 
 .input {
   background-color: #f3f4f8;
-  width: 80%;
+  width: 70%;
   border: none;
   height: 45px;
   margin-right: 10px;
@@ -117,7 +117,7 @@ form {
 /* Janela humidade, vento e sensação */
 
 .weather-specs {
-  width: 50%;
+  max-width: 330px;
   margin: 10px auto;
   padding: 10px 10px 10px 30px;
   display: flex;
