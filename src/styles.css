@@ -2,22 +2,17 @@ body {
   background-color: #f1f1f1;
   background-image: url(/images/bc-gradient.jpeg);
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  color: #96a6c0;
 }
 
 /* APP container */
 
 .weather-container {
   background-color: #fff;
-  padding: 30px 30px 0 30px;
-  border-radius: 32px;
   width: 60vw;
+  padding: 30px 30px 0 30px;
   margin: 40px auto;
+  border-radius: 32px;
 }
-/*  font-family: "Funnel Display", sans-serif;*/
 
 header {
   margin-bottom: 30px;
@@ -64,17 +59,9 @@ form {
 
 .current-weather {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  margin: 0 auto;
-}
-
-.city-weather {
-  display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: start;
 }
 
 .date {
@@ -82,11 +69,16 @@ form {
   font-size: 14px;
   margin: 0;
 }
+
 .current-city {
   font-size: 28px;
   font-weight: 300;
   color: #222041;
   margin: 0;
+}
+
+.temperature-display {
+  display: flex;
 }
 
 .current-temperature {
@@ -95,21 +87,13 @@ form {
   color: #222041;
   margin: 0;
 }
-.current-temperature span {
-  font-size: 20px;
-  font-weight: 300;
-  position: relative;
-  top: -25px;
+.unit {
+  font-size: 16px;
+  margin: 8px 0 0 4px;
+  color: #96a6c0;
 }
 
-.icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icon img {
-  margin: 0;
+.current-weather-icon img {
   position: relative;
   top: -30px;
 }
@@ -118,8 +102,8 @@ form {
 
 .weather-specs {
   max-width: 330px;
-  margin: 10px auto;
   padding: 10px 10px 10px 30px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   border-radius: 16px;
@@ -129,8 +113,6 @@ form {
     rgb(122, 200, 255) 0%,
     rgb(54, 154, 226) 90%
   );
-  position: relative;
-  top: -30px;
 }
 
 .description {
@@ -146,6 +128,7 @@ form {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-self: center;
   padding: 13px 0;
 }
 
