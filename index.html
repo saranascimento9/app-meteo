@@ -27,12 +27,13 @@
     <div class="weather-container">
       <header>
         <!--Search bar -->
-        <form action="">
+        <form action="" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="input"
+            id="search-input"
           />
           <input type="submit" value="search" class="form-btn" />
         </form>
@@ -47,7 +48,7 @@
           <!-- Basic data -->
           <section class="city-weather">
             <p class="date">Thursday, 12:04</p>
-            <h2 class="current-city">Sintra</h2>
+            <h2 class="current-city" id="city">Sintra</h2>
             <h1 class="current-temperature">15<span>ºC</span></h1>
           </section>
 
@@ -121,5 +122,7 @@
         </p>
       </footer>
     </div>
+
+    <script src="src/index.js"></script>
   </body>
 </html>
