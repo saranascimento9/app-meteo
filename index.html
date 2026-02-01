@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,48 +63,147 @@
 
           <!--Icon -->
           <section class="current-weather-icon" id="icon"></section>
+
+          <!--Specs-->
+          <div class="weather-specs">
+            <!--Now future dropdown)-->
+            <section class="now-dropdown">
+              <p>now:</p>
+
+              <span class="material-symbols-outlined"> keyboard_arrow_up </span>
+            </section>
+
+            <div class="specs">
+              <!--Feels like-->
+              <section class="specification">
+                <div>
+                  <span class="description" id="description"></span>
+                </div>
+              </section>
+
+              <!--Feels like-->
+              <section class="specification">
+                <img
+                  src="images/feels like.svg"
+                  alt="Thermometer icon"
+                  height="10"
+                />
+                <div>
+                  <p class="spec-name">feel like</p>
+                  <span class="spec-value" id="feel"></span>
+                </div>
+              </section>
+
+              <!--Humidity -->
+              <section class="specification">
+                <img
+                  src="images/humidity.svg"
+                  alt="Humidity icon"
+                  height="10"
+                />
+                <div>
+                  <p class="spec-name">humidity</p>
+                  <span class="spec-value" id="humidity"></span>
+                </div>
+              </section>
+
+              <!--Wind-->
+              <section class="specification">
+                <img src="images/wind.svg" alt="Wind icon" height="10" />
+                <div>
+                  <p class="spec-name">wind</p>
+                  <span class="spec-value" id="wind"></span>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
 
-        <!--Specs-->
-        <div class="weather-specs">
-          <!--Feels like-->
-          <section class="specification">
-            <div>
-              <span class="description" id="description"></span>
-            </div>
-          </section>
+        <!-- Forecast zone -->
 
-          <!--Feels like-->
-          <section class="specification">
-            <img
-              src="images/feels like.svg"
-              alt="Thermometer icon"
-              height="10"
-            />
-            <div>
-              <p class="spec-name">feel like</p>
-              <span class="spec-value" id="feel"></span>
-            </div>
-          </section>
+        <section class="weather-forecast">
+          <!-- Forecast days -->
 
-          <!--Humidity -->
-          <section class="specification">
-            <img src="images/humidity.svg" alt="Humidity icon" height="10" />
-            <div>
-              <p class="spec-name">humidity</p>
-              <span class="spec-value" id="humidity"></span>
+          <!-- Day 1 -->
+          <div class="weather-forecast-day">
+            <div class="forecast-day-name">mon</div>
+            <div class="forecast-day-icon">
+              <img
+                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
+                alt=""
+                width="60px"
+              />
             </div>
-          </section>
+            <div class="forecast-day-temperatures">
+              <span class="min-temp">12º</span>
+              <span class="max-temp">15º</span>
+            </div>
+          </div>
 
-          <!--Wind-->
-          <section class="specification">
-            <img src="images/wind.svg" alt="Wind icon" height="10" />
-            <div>
-              <p class="spec-name">wind</p>
-              <span class="spec-value" id="wind"></span>
+          <!-- Day 2 -->
+          <div class="weather-forecast-day">
+            <div class="forecast-day-name">mon</div>
+            <div class="forecast-day-icon">
+              <img
+                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
+                alt=""
+                width="60px"
+              />
             </div>
-          </section>
-        </div>
+            <div class="forecast-day-temperatures">
+              <span class="min-temp">12º</span>
+              <span class="max-temp">15º</span>
+            </div>
+          </div>
+
+          <!-- Day 3 -->
+          <div class="weather-forecast-day">
+            <div class="forecast-day-name">mon</div>
+            <div class="forecast-day-icon">
+              <img
+                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div class="forecast-day-temperatures">
+              <span class="min-temp">12º</span>
+              <span class="max-temp">15º</span>
+            </div>
+          </div>
+
+          <!-- Day 4 -->
+          <div class="weather-forecast-day">
+            <div class="forecast-day-name">mon</div>
+            <div class="forecast-day-icon">
+              <img
+                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div class="forecast-day-temperatures">
+              <span class="min-temp">12º</span>
+              <span class="max-temp">15º</span>
+            </div>
+          </div>
+
+          <!-- Day 5 -->
+          <div class="weather-forecast-day">
+            <div class="forecast-day-name">mon</div>
+            <div class="forecast-day-icon">
+              <img
+                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div class="forecast-day-temperatures">
+              <span class="min-temp">12º</span>
+              <span class="max-temp">15º</span>
+            </div>
+          </div>
+        </section>
       </main>
       <footer>
         <p>

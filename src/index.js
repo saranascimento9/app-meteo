@@ -73,7 +73,7 @@ function updatedWeather(response) {
       icon = "fog-day";
       break;
     case "mist-night":
-      icon = "fog-nigth";
+      icon = "fog-night";
       break;
   }
 
