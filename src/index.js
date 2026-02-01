@@ -79,7 +79,7 @@ function updatedWeather(response) {
 
   iconElement.innerHTML = `<img src="https://basmilius.github.io/weather-icons/production/line/all/${icon}.svg"
               alt="${icon}"
-              height="180"
+              height="220"
             />`;
 
   console.log(icon);
