@@ -58,10 +58,10 @@ function updatedWeather(response) {
       icon = "rain";
       break;
     case "thunderstorm-day":
-      icon = "thumderstorms-day";
+      icon = "thunderstorms-day";
       break;
     case "thunderstorm-night":
-      icon = "thumderstorms-night";
+      icon = "thunderstorms-night";
       break;
     case "snow-day":
       icon = "snow";
