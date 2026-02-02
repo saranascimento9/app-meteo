@@ -1,6 +1,5 @@
 body {
   background-color: #f1f1f1;
-  background-size: cover;
   background-image: url(/images/bc-gradient.jpeg);
   font-family: "Inter", sans-serif;
 }
@@ -169,6 +168,8 @@ form {
   font-weight: 400;
 }
 
+/* Forecast */
+
 .weather-forecast {
   display: flex;
   flex-wrap: wrap;
@@ -185,7 +186,7 @@ form {
   justify-content: center;
   align-items: center;
   margin: 20px 0 0 0;
-  padding: 20px;
+  padding: 20px 30px;
   border-radius: 16px;
   background-color: #f7f8fd;
 }

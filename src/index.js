@@ -90,6 +90,8 @@ function updatedWeather(response) {
 
   let city = document.querySelector("#city");
   city.innerHTML = response.data.city;
+
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -127,35 +129,104 @@ function displaySearch(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let days = ["tue", "wed", "thu", "fri", "sat"];
+function getForecast(city) {
+  let apiKey = "6358081e1cde3290ob08ccfb46eacbt7";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    let icon = day.condition.icon;
+
+    switch (icon) {
+      case "clear-sky-day":
+        icon = "clear-day";
+        break;
+      case "clear-sky-night":
+        icon = "clear-night";
+        break;
+      case "few-clouds-day":
+        icon = "partly-cloudy-day";
+        break;
+      case "few-clouds-night":
+        icon = "partly-cloudy-night";
+        break;
+      case "scattered-clouds-day":
+        icon = "cloudy";
+        break;
+      case "scattered-clouds-night":
+        icon = "cloudy";
+        break;
+      case "broken-clouds-day":
+        icon = "overcast-day";
+        break;
+      case "broken-clouds-night":
+        icon = "overcast-night";
+        break;
+      case "shower-rain-day":
+        icon = "partly-cloudy-day-drizzle";
+        break;
+      case "shower-rain-night":
+        icon = "partly-cloudy-night-drizzle";
+        break;
+      case "rain-day":
+        icon = "rain";
+        break;
+      case "rain-night":
+        icon = "rain";
+        break;
+      case "thunderstorm-day":
+        icon = "thunderstorms-day";
+        break;
+      case "thunderstorm-night":
+        icon = "thunderstorms-night";
+        break;
+      case "snow-day":
+        icon = "snow";
+        break;
+      case "snow-night":
+        icon = "snow";
+        break;
+      case "mist-day":
+        icon = "fog-day";
+        break;
+      case "mist-night":
+        icon = "fog-night";
+        break;
+    }
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
           <div class="weather-forecast-day">
-            <div class="forecast-day-name">${day}</div>
+            <div class="forecast-day-name">${formatDay(day.time)}</div>
             <div class="forecast-day-icon">
-              <img
-                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
-                alt=""
-                width="60px"
-              />
+              <img src="https://basmilius.github.io/weather-icons/production/line/all/${icon}.svg"
+              alt="${icon}"
+              height="60"
+            />
             </div>
             <div class="forecast-day-temperatures">
-              <span class="min-temp">12º</span>
-              <span class="max-temp">15º</span>
+              <span class="min-temp">${Math.round(day.temperature.minimum)}º</span>
+              <span class="max-temp">${Math.round(day.temperature.maximum)}º</span>
             </div>
           </div>`;
+    }
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
   });
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = forecastHtml;
+}
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+
+  return days[date.getDay()];
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", displaySearch);
 searchCity("Sintra");
-
-displayForecast();
