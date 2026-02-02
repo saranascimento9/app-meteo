@@ -1,7 +1,6 @@
 // Separation of concerns, function needs to do one thing and do it well
 
 function updatedWeather(response) {
-  console.log(response.data);
   let timeElement = document.querySelector("#time");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
@@ -82,9 +81,6 @@ function updatedWeather(response) {
               height="220"
             />`;
 
-  console.log(icon);
-  console.log(iconElement);
-
   timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
   descriptionElement.innerHTML = description;
@@ -131,7 +127,35 @@ function displaySearch(event) {
   searchCity(searchInput.value);
 }
 
-let searchFormElement = document.querySelector("#search-form");
+function displayForecast() {
+  let days = ["tue", "wed", "thu", "fri", "sat"];
+  let forecastHtml = "";
 
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+          <div class="weather-forecast-day">
+            <div class="forecast-day-name">${day}</div>
+            <div class="forecast-day-icon">
+              <img
+                src="https://bmcdn.nl/assets/weather-icons/v3.0/line/svg/overcast-rain.svg"
+                alt=""
+                width="60px"
+              />
+            </div>
+            <div class="forecast-day-temperatures">
+              <span class="min-temp">12º</span>
+              <span class="max-temp">15º</span>
+            </div>
+          </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
+let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", displaySearch);
-searchCity("Paris");
+searchCity("Sintra");
+
+displayForecast();
