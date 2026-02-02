@@ -227,6 +227,17 @@ function formatDay(timestamp) {
   return days[date.getDay()];
 }
 
+function toggleDropdown() {
+  let specsElement = document.querySelector("#specs");
+  let chevronElement = document.querySelector("#chevron-toggle");
+
+  specsElement.classList.toggle("specs-closed");
+  chevronElement.classList.toggle("chevron");
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", displaySearch);
 searchCity("Sintra");
+
+let toggleBarElement = document.querySelector("#toggle-bar");
+toggleBarElement.addEventListener("click", toggleDropdown);

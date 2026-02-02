@@ -68,55 +68,62 @@
 
           <!--Specs-->
           <div class="weather-specs">
-            <!--Now (future dropdown)-->
-            <section class="now-dropdown">
+            <section class="now-dropdown" id="toggle-bar">
               <p>now:</p>
 
-              <span class="material-symbols-outlined"> keyboard_arrow_up </span>
+              <ion-icon
+                class="chevron"
+                id="chevron-toggle"
+                name="chevron-up-outline"
+              ></ion-icon>
             </section>
 
-            <div class="specs">
-              <!--Feels like-->
-              <section class="specification">
-                <div>
-                  <span class="description" id="description"></span>
-                </div>
-              </section>
+            <!--expandable wrapper-->
+            <div class="" id="specs">
+              <!--expandable content-->
+              <div class="specs">
+                <!--Description-->
+                <section class="specification">
+                  <div>
+                    <span class="description" id="description"></span>
+                  </div>
+                </section>
 
-              <!--Feels like-->
-              <section class="specification">
-                <img
-                  src="images/feels like.svg"
-                  alt="Thermometer icon"
-                  height="10"
-                />
-                <div>
-                  <p class="spec-name">feel like</p>
-                  <span class="spec-value" id="feel"></span>
-                </div>
-              </section>
+                <!--Feels like-->
+                <section class="specification">
+                  <img
+                    src="images/feels like.svg"
+                    alt="Thermometer icon"
+                    height="10"
+                  />
+                  <div>
+                    <p class="spec-name">feel like</p>
+                    <span class="spec-value" id="feel"></span>
+                  </div>
+                </section>
 
-              <!--Humidity -->
-              <section class="specification">
-                <img
-                  src="images/humidity.svg"
-                  alt="Humidity icon"
-                  height="10"
-                />
-                <div>
-                  <p class="spec-name">humidity</p>
-                  <span class="spec-value" id="humidity"></span>
-                </div>
-              </section>
+                <!--Humidity -->
+                <section class="specification">
+                  <img
+                    src="images/humidity.svg"
+                    alt="Humidity icon"
+                    height="10"
+                  />
+                  <div>
+                    <p class="spec-name">humidity</p>
+                    <span class="spec-value" id="humidity"></span>
+                  </div>
+                </section>
 
-              <!--Wind-->
-              <section class="specification">
-                <img src="images/wind.svg" alt="Wind icon" height="10" />
-                <div>
-                  <p class="spec-name">wind</p>
-                  <span class="spec-value" id="wind"></span>
-                </div>
-              </section>
+                <!--Wind-->
+                <section class="specification">
+                  <img src="images/wind.svg" alt="Wind icon" height="10" />
+                  <div>
+                    <p class="spec-name">wind</p>
+                    <span class="spec-value" id="wind"></span>
+                  </div>
+                </section>
+              </div>
             </div>
           </div>
         </div>
@@ -147,6 +154,14 @@
       </footer>
     </div>
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="src/index.js"></script>
   </body>
 </html>
