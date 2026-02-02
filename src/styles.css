@@ -1,7 +1,7 @@
 body {
   background-color: #f1f1f1;
   background-image: url(/images/bc-gradient.jpeg);
-  font-family: "Inter", sans-serif;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 /* APP container */
@@ -38,6 +38,7 @@ form {
 
 .input::placeholder {
   color: #9ca3af;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .form-btn {
@@ -47,6 +48,7 @@ form {
   padding: 16px 30px;
   color: #fff;
   border-radius: 30px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .form-btn:hover {
@@ -55,6 +57,7 @@ form {
   background-color: #b7e1ff;
   color: #2885c7;
   transition: 0.3s;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 /* Current Weather */
 
@@ -86,7 +89,7 @@ form {
 .current-city {
   font-size: 28px;
   font-weight: 300;
-  color: #222041;
+  color: #323e4f;
   margin: 0;
 }
 
@@ -97,7 +100,7 @@ form {
 .current-temperature {
   font-size: 55px;
   font-weight: 300;
-  color: #222041;
+  color: #323e4f;
   margin: 0;
 }
 .unit {
