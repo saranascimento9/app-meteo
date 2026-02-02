@@ -279,7 +279,7 @@ footer a {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1030px) {
   .weather-forecast {
     display: flex;
     flex-direction: column;
